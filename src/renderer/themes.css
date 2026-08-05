@@ -1,0 +1,30 @@
+/* Lexend Deca — bundled with the app (loaded from disk, works offline). */
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('../assets/fonts/LexendDeca-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Midnight theme (the only theme — kept for the palette variables). */
+:root {
+  --bg-deep: #131313;
+  --bg-elevated: rgba(217, 217, 217, 0.04);
+  --glass-frost: rgba(217, 217, 217, 0.06);
+  --glass-frost-hover: rgba(217, 217, 217, 0.10);
+  --glass-frost-active: rgba(217, 217, 217, 0.15);
+  --glass-card: rgba(217, 217, 217, 0.05);
+  --glass-card-border: rgba(217, 217, 217, 0.12);
+  --glass-card-border-strong: rgba(217, 217, 217, 0.20);
+  --text-primary: #d4d4d4;
+  --text-secondary: rgba(212, 212, 212, 0.62);
+  --text-tertiary: rgba(212, 212, 212, 0.40);
+  --text-bright: #ffffff;
+  --window-edge: #3f3f3f;
+  --accent: #ffffff;
+  --accent-dim: rgba(255, 255, 255, 0.45);
+  --toggle-off: rgba(217, 217, 217, 0.16);
+  --popup-card-bg: rgba(19, 19, 19, 0.95);
+  --popup-card-border: #3f3f3f;
+}

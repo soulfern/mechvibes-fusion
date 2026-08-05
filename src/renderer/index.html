@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechvibes Fusion</title>
+  <link rel="stylesheet" href="themes.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="window-shell">
+    <header class="titlebar">
+      <span class="version-tag" id="version-tag"></span>
+      <div class="window-actions">
+        <button class="icon-button" id="minimize-window" aria-label="Minimize" title="Minimize">&mdash;</button>
+        <button class="icon-button close-button" id="close-window" aria-label="Close to tray" title="Close to tray">&times;</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="keycap-title" id="keycap-title" title="Mechvibes Fusion"></div>
+      <div class="settings-view" id="settings-view">
+        <div class="deck-block">
+          <div class="deck-block-head">
+            <span>Keyboard</span>
+          </div>
+          <div class="deck-dropdown" id="keyboard-pack-dd"></div>
+          <div class="deck-row">
+            <input type="range" id="slider-keyboardVolume" min="0" max="200" step="1" class="deck-range" />
+            <span class="slider-value" id="value-keyboardVolume">90</span>
+          </div>
+        </div>
+
+        <div class="deck-block">
+          <div class="deck-block-head">
+            <span>Mouse</span>
+          </div>
+          <div class="deck-dropdown" id="mouse-pack-dd"></div>
+          <div class="deck-row">
+            <input type="range" id="slider-mouseVolume" min="0" max="200" step="1" class="deck-range" />
+            <span class="slider-value" id="value-mouseVolume">90</span>
+          </div>
+        </div>
+
+        <div class="deck-footer">
+          <button class="deck-btn" id="open-packs-btn">Open soundpack folder</button>
+          <button class="deck-btn" id="refresh-packs-btn">Reload soundpacks</button>
+        </div>
+
+        <div class="settings-card">
+          <div class="setting-row">
+            <span class="setting-label">Key-up sounds</span>
+            <label class="toggle"><input type="checkbox" id="set-keyup" /><span class="slider"></span></label>
+          </div>
+          <div class="setting-divider"></div>
+          <div class="setting-row">
+            <span class="setting-label">Randomize sounds</span>
+            <label class="toggle"><input type="checkbox" id="set-random" /><span class="slider"></span></label>
+          </div>
+        </div>
+
+        <div class="settings-card">
+          <div class="setting-row">
+            <span class="setting-label">Launch on startup</span>
+            <label class="toggle"><input type="checkbox" id="set-startAtLogin" /><span class="slider"></span></label>
+          </div>
+        </div>
+
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+        <div class="brand-footer">
+          Made with <span class="heart">&hearts;</span> by <a class="profile-link" id="profile-link" href="#">soulfern</a>
+          <span class="footer-sep">&middot;</span>
+          <a class="profile-link" id="support-link" href="#">Support Original Mechvibes</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
