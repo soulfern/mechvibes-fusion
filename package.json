@@ -1,0 +1,74 @@
+{
+  "name": "mechvibes-fusion",
+  "productName": "Mechvibes Fusion",
+  "version": "1.0.0",
+  "description": "A mechanical keyboard sound simulator combining MechVibesDX and MechVibes++ — key-down, key-up, randomized, and mouse sounds with full Mechvibes soundpack compatibility.",
+  "main": "src/main/main.js",
+  "author": "Mechvibes Fusion",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test",
+    "verify": "npm run test",
+    "rebuild": "node tools/rebuild.js",
+    "package": "electron-builder --dir",
+    "dist": "electron-builder --win portable",
+    "clean": "node tools/clean.js"
+  },
+  "devDependencies": {
+    "electron": "^37.2.6",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "howler": "^2.2.4",
+    "uiohook-napi": "^1.5.4"
+  },
+  "build": {
+    "appId": "com.mechvibes.fusion",
+    "productName": "Mechvibes Fusion",
+    "artifactName": "MechvibesFusion-Setup-${version}.${ext}",
+    "asar": true,
+    "compression": "maximum",
+    "npmRebuild": false,
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "extraMetadata": {
+      "name": "mechvibes-fusion"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Mechvibes Fusion",
+      "artifactName": "MechvibesFusion-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "MechvibesFusion-Portable-${version}.${ext}"
+    }
+  },
+  "electronRebuildConfig": {
+    "modulePath": "uiohook-napi"
+  }
+}
