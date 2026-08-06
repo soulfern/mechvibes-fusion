@@ -41,12 +41,17 @@ npm run rebuild     # compiles the native input hook for Electron
 npm start
 ```
 
-**Writing a build / portable exe:**
+**Writing a build / installer:**
 
 ```bash
 npm run package     # unpacked app in ./dist
-npm run dist        # portable .exe
+npm run dist        # NSIS installer (.exe) in ./dist
 ```
+
+> **Windows SmartScreen:** the installer is not code-signed with a trusted
+> publisher certificate, so Windows shows an "unknown publisher" warning on
+> first run. That's expected — click **More info → Run anyway**. A paid code-
+> signing certificate would remove the prompt.
 
 ---
 
